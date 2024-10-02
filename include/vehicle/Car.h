@@ -1,18 +1,19 @@
 #pragma once
 
-#include <random>
+#include <string>
+#include <vector>
 
-class Car
-{
+class Car {
 private:
    std::string getRandomCarName();
    std::string name;
    double normalSpeed;
    double actualSpeed;
-   double distanceTraveled = 0;
+   double distanceTraveled;
+   inline static std::vector<std::string> carNames = {"Aura", "Origin", "Tracer", "Roamer", "Crux", "Cobra", "Blast", "Prodigy", "Mirage", "Pulse"}; 
 public:
    Car();
-   void prepareForLap(bool& isYellowFlag);
+   void prepareForLap(bool isYellowFlag);
    std::string toString();
    void moveForAnHour();
 };

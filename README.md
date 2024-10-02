@@ -29,7 +29,7 @@ Cars are vehicles with personality so they have imaginative names. Create a list
 "Aura", "Origin", "Tracer", "Roamer", "Crux", "Cobra", "Blast", "Prodigy", "Mirage", "Pulse"
 - The `normalSpeed` property stores the normal speed of the car, set to a random number in the constructor between 80 and 110 km/h
 - The `actual speed` of the car for this hour is stored in actualSpeed. If there is a yellow flag, limit the speed of car to 75 km/h otherwise use the value of normalSpeed
-- The `distanceTraveled()` property holds the summarised distance travelled in the race so far
+- The `distanceTraveled` property holds the summarised distance travelled in the race so far
 - The `prepareForLap()` method is used to set the actual speed used for the current lap
 
 ### Motorcycle

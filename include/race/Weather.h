@@ -1,5 +1,4 @@
-#ifndef CAR_RACE_SRC_WEATHER_H_
-#define CAR_RACE_SRC_WEATHER_H_
+#pragma once
 
 #include <string>
 #include <random>
@@ -15,5 +14,3 @@ class Weather {
     bool isRaining() const;
     void randomize();
 };
-
-#endif //CAR_RACE_SRC_WEATHER_H_
