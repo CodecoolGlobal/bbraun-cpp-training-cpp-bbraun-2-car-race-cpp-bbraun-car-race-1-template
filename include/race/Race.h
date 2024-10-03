@@ -14,10 +14,10 @@ private:
    bool isYellowFlag = false;
 public:
    void simulateRace(Weather &weather);
-   void printRaceResults();
-   bool isYellowFlagActive();
+   void printRaceResults() const;
+   bool isYellowFlagActive() const;
    
-   void registerCar(Car car);
-   void registerMotorcycle(Motorcycle motorcycle);
-   void registerTruck(Truck truck);
+   void registerCar(Car const& car);
+   void registerMotorcycle(Motorcycle const& motorcycle);
+   void registerTruck(Truck const& truck);
 };

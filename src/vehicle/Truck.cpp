@@ -4,7 +4,7 @@ using namespace std;
 
 Truck::Truck() : name(getTruckName()), normalSpeed(100), distanceTraveled(0), truckStatus(TruckStatus::NOT_BROKEN){}
 
-string Truck::getTruckName(){
+string Truck::getTruckName() const {
     return to_string(rand() % 1000);
 }
 
@@ -34,7 +34,7 @@ void Truck::moveForAnHour(){
     distanceTraveled += actualSpeed;
 }
 
-string Truck::toString(){
+string Truck::toString() const {
     return "Type: Truck, Name: " + name + ", normal speed: " + to_string(normalSpeed) + ", actual speed: " +
         to_string(actualSpeed) + ", distance traveled: " + to_string(distanceTraveled);
 }

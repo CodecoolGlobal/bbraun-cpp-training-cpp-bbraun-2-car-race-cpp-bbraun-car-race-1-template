@@ -4,11 +4,11 @@ using namespace std;
 
 Motorcycle::Motorcycle(): name(getMotorcycleName()), normalSpeed(100), distanceTraveled(0){}
 
-string Motorcycle::getMotorcycleName(){
+string Motorcycle::getMotorcycleName() const {
     return "Motorcycle " + to_string(++motorcycleCount);
 }
 
-void Motorcycle::prepareForLap(Weather& weather){
+void Motorcycle::prepareForLap(Weather const& weather){
     if (weather.isRaining()){
         actualSpeed = 5 + rand() % 45;
     } else {
@@ -20,7 +20,7 @@ void Motorcycle::moveForAnHour(){
     distanceTraveled += actualSpeed;
 }
 
-string Motorcycle::toString() {
+string Motorcycle::toString() const {
     return "Type: motorcycle, Name: " + name + ", normal speed: " + to_string(normalSpeed) + ", actual speed: " +
         to_string(actualSpeed) + ", distance traveled: " + to_string(distanceTraveled);
 }
